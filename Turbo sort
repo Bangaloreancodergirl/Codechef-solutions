@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	int t;
+	scanf("%d", &t);
+	int arr[t], x[1000001] = {0};
+	
+	for(int i = 0; i < t; i++) {
+	    scanf("%d", &arr[i]);
+	    x[arr[i]]++;
+	}
+	
+	for(int i = 0; i < 1000001; i++) {
+	    while(x[i] > 0) {
+	        printf("%d\n", i);
+	        x[i]--;
+	    }
+	}
+	
+	return 0;
+}
