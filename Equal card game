@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(void)
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+    int k,a=52,res;
+    scanf("%d",&k);
+    res=a%k;
+    printf("%d\n",res);
+    }
+    return 0;
+}
