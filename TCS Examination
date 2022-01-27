@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main(void)
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int dsa1,dsa2,toc1,toc2,dm1,dm2,tot1,tot2;
+        scanf("%d %d %d",&dsa1,&toc1,&dm1);
+        scanf("%d %d %d",&dsa2,&toc2,&dm2);
+        tot1=(dsa1+toc1+dm1);
+        tot2=(dsa2+toc2+dm2);
+        if(tot1>tot2)
+        {
+            printf("Dragon\n");
+        }
+        else if(tot2>tot1)
+        {
+            printf("Sloth\n");
+        }
+        else if(tot1==tot2 && dsa1>dsa2)
+        {
+            printf("Dragon\n");
+        }
+        else if(tot1==tot2 && dsa2>dsa1)
+        {
+            printf("Sloth\n");
+        }
+        else if((tot1==tot2 && dsa2==dsa1) && toc1>toc2)
+        {
+            printf("Dragon\n");
+        }
+        else if((tot1==tot2 && dsa2==dsa1) && toc2>toc1)
+        {
+            printf("Sloth\n");
+        }
+        else
+        {
+            printf("Tie\n");
+        }
+        
+    }
+    return 0;
+}
+
